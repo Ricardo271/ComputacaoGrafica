@@ -114,7 +114,7 @@ void atualizar_animacao() {
     manter_dentro_tela();
     desenhar_cena();
 }
-\\PARA MOVER O POLIGONO(ESTRELINHA DAORA) APERTE W,S,D,F
+//PARA MOVER O POLIGONO(ESTRELINHA DAORA) APERTE W,S,D,F
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
