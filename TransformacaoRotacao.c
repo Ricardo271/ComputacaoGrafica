@@ -4,11 +4,9 @@
 #include <stdio.h>
 #include <math.h>
 
-// Ângulo de rotação
-GLfloat angle = 0.0;
 // Coordenadas dos vértices do quadrado
 GLfloat vertices[4][2] = {{-0.5, -0.5}, {0.5, -0.5}, {0.5, 0.5}, {-0.5, 0.5}};
-GLfloat angulo;
+GLfloat angulo; // angulo de rotação
 
 // Função para calcular o baricentro do quadrado
 void calcularBaricentro(GLfloat *baricentro)
