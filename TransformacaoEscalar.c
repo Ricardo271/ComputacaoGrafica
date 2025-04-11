@@ -29,10 +29,6 @@ void Escalar(GLfloat scale_x, GLfloat scale_y) {
     for (int i =0; i < 3; i++) {
         GLfloat x = vertices[i][0] * scale_x;
         GLfloat y = vertices[i][1] * scale_y;
-        x = max(x, -1);
-        x = min(x, 1);
-        y = max(y, -1);
-        y = min(y, 1);
         vertices[i][0] = x;
         vertices[i][1] = y;
     }
@@ -67,7 +63,7 @@ int main(int argc, char* argv[]) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 
-    glutInitWindowSize(600, 600);
+    glutInitWindowSize(800, 800);
     glutInitWindowPosition(100, 50);
     glutCreateWindow("Rotaciona Triangulo");
 
