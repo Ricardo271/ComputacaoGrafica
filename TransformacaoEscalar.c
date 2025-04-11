@@ -14,14 +14,29 @@ void Inicializa() {
     glClearColor(0.0f,  0.0f, 0.0f, 1.0f); // define a cor do fundo
 }
 
+float max(float a, float b){
+    if(a>b) return a;
+    return b;
+}
+
+float min(float a, float b){
+    if(a<b) return a;
+    return b;
+}
+
 // Multiplica o x e y de cada vértice do triângulo pelo fators de escala daquele eixo
 void Escalar(GLfloat scale_x, GLfloat scale_y) {
     for (int i =0; i < 3; i++) {
         GLfloat x = vertices[i][0] * scale_x;
         GLfloat y = vertices[i][1] * scale_y;
+        x = max(x, -1);
+        x = min(x, 1);
+        y = max(y, -1);
+        y = min(y, 1);
         vertices[i][0] = x;
         vertices[i][1] = y;
     }
+
 }
 
 void Desenha() {
@@ -29,15 +44,14 @@ void Desenha() {
 
     glColor3f(1.0, 0.0, 0.0); // Define a cor do triângulo
 
+    Escalar(fator_escala_x, fator_escala_y);
+
     // Define os vértices do triângulo
     glBegin(GL_TRIANGLES);
     for (int i = 0; i < 3; i++) {
         glVertex2fv(vertices[i]);
     }
     glEnd();
-
-    Escalar(fator_escala_x, fator_escala_y);
-
     glFlush(); // Aplica as mudanças do buffer
 }
 
