@@ -28,7 +28,7 @@ void rotacionar(){
     GLfloat cos_angulo = cos(angulo * 3.1429 / 180); 
     GLfloat sin_angulo = sin(angulo * 3.1429 / 180); 
     for (int i = 0; i < 4; i++) {
-        // a formula de rotacao em relacao à origem
+        // a formula de rotacao em relacao à origem, no sentido anti-horário
         // x' = xcosO - ysinO
         // y' = xsinO + ycosO 
         GLfloat x = vertices[i][0] - baricentro[0]; // fazemos a origem ser o bariecentro, logo subtraimos todas coordenadas pelo baricentro
