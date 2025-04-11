@@ -8,7 +8,7 @@
 #define NUM_PONTOS 5
 #define VERTICES_ESTRELA 10
 
-float esquerda = -1.0, direita = 1.0, baixo = -1.0, cima = 1.0;
+float esquerda = -1.0, direita = 1.0, baixo = -1.0, cima = 1.0; // as coordenadas da tela vão de (-1,-1) a (1, 1)
 int largura_janela = 800, altura_janela = 800;
 
 float posicoes_estrela[VERTICES_ESTRELA][2];
